@@ -3,7 +3,7 @@ import { Provider } from './../types/types.config.js';
 // Default models for each provider
 export const DEFAULT_MODELS: Record<Provider, string> = {
   gemini: 'gemini-2.0-flash',
-  groq: 'llama-3.3-70b-versatile',
+  groq: 'openai/gpt-oss-20b',
   ollama: 'llama3',
   openai: 'gpt-4o-mini',
   anthropic: 'claude-haiku-4-5',

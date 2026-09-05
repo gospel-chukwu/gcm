@@ -32,7 +32,7 @@ export function handleError(err: any): never {
   if (status === 401 || status === 403) throw new Error('invalid_key');
   if (status === 429) throw new Error('rate_limited');
   if (status >= 500) throw new Error('server_error');
-  if (status === 400) throw new Error('invalid_request');
+  if (status === 400 || status === 404) throw new Error('invalid_request');
 
   const networkCodes = [
     'ECONNREFUSED',
